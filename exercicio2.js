@@ -23,3 +23,14 @@ let area = largura * altura;
 
 //exibe o resultado no console
 console.log("a area do retangulo e:" + area);
+
+// declaracao de variáveis 
+let celsius = 25; // Temperatura em Celsius 
+
+//convensão para Fahrenheit 
+let Fahrenheit = (celsis * 9/5)+ 32;
+
+// Exibe o resultado no controle 
+controle.log(celsius + " °C é equivalentea a " + Fahrenheit + "°F.");
+
+
