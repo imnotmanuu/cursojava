@@ -33,4 +33,22 @@ let Fahrenheit = (celsis * 9/5)+ 32;
 // Exibe o resultado no controle 
 controle.log(celsius + " °C é equivalentea a " + Fahrenheit + "°F.");
 
+// declaração de variáveis 
+let raio = 7; // Raio do circulo 
+const pi = 3.14156; // Valor do pi 
 
+// Calculo do perimetro 
+let perimetro = 2 * pi * raio;
+
+//exibe o resultado no console 
+console.log("o perimetro do circulo e: "+perimetro);
+
+//declaração de variaveis 
+let precoriginal = 100; // Preço  original do prduto 
+let desconto =15; // Desconto em porcentagem 
+
+//cálculo do preço final 
+let precofinal = precooriginal - (precooriginal  + desconto  / 100);
+
+//Exibe o resultado no controlen
+console.log ("O preco final com desconto e : R$" + precofinal);
