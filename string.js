@@ -1,2 +1,2 @@
 let nomecompleto ="manueyasmin"
-console.log("bem-vinda(o), " +nomeCompleto +"!");
+console.log("bem-vindo(a), " +nomeCompleto +"!");
