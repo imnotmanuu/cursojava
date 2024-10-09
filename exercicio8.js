@@ -38,4 +38,4 @@ console.log("O segundo numero e impar", segundoImpar);
 console.log("O primeiro numero e maior que o segundo e e par?", primeiroMaior && primeiroPar);
 console.log("O primeiro ou o segundo numero e par?", primeiroPar || ehPar (num2));
 
-rl.close();}):  
+rl.close();}); 
