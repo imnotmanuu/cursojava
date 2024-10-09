@@ -1,40 +1,46 @@
-// Configuração para entrada de dados do terminal 
+const readline = require('readline');
+
+// Configuration for data entry in the terminal
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
+});
+
+// Function to check if a number is even
+
+function ehPar(numero) {
+    return numero % 2 === 0;
+}
+
+// Function to check if a number is odd
+
+function ehImpar(numero) {
+    return numero % 2 !== 0;
+}
+
+// Ask for both numbers and do the checks
+
+rl.question("Enter the first number: ", (input1) => {
+    const num1 = parseInt(input1);
+
+    rl.question("Enter the second number: ", (input2) => {
+        const num2 = parseInt(input2);
+
+        // Boolean checks
+        let firstGreater = num1 > num2;
+        let firstPair = ehPar(num1);
+        let secondOdd = ehImpar(num2);
+
+        // Display the results of the checks
+        console.log("Is the first number greater than the second?", firstGreater);
+        console.log("Is the first number even?", firstPar);
+        console.log("Is the second number odd?", secondOdd);
+
+        // Logical operators
+        console.log("Is the first number greater than the second and is it even?", firstGreater && firstPair);
+        console.log("Is the first or second number even?", firstPair || ehPar(num2));
+
+        rl.close();
     });
-    
-    // Função para vereficar se um numero é par 
-    function ehPar(numero) {
-        return  numero % 2 === 0;
-    }
-    
-    // Função para verificar se um número é impar
-    function ehImpar(numero) {
-        return numero % 2 !== 0;
-    }
-    
-    // Pergunta aos dois números e faz as verificações 
-    rl.question("Digite o primeiro numero: ", (imput1) => {
-    const num1 = parseInt(imput1);
-    
-    rl.question("digite o segundo numero: ",(imput2) => {
-        const num2 = parceInt(imput2);
-    })
-     
-    //Verificações de booleanas 
-        let primeiroMaior = num1 > num2;
-        let primeiroPar = ehPar(num1);
-        let segundoImpar = ehImpar(num2);
-    
-    //Exibe os resultados das verificações 
-    console.log("O primeiro numero e maior que o segundo?", primeiroMaior);
-    console.log("O primeiro numero e par?", primeiroPar);
-    console.log("O segundo numero e impar", segundoImpar);
-    
-    //Operadores logicos 
-    console.log("O primeiro numero e maior que o segundo e e par?", primeiroMaior && primeiroPar);
-    console.log("O primeiro ou o segundo numero e par?", primeiroPar || ehPar (num2));
-    
-    rl.close();
 });
